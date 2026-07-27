@@ -4,7 +4,6 @@ import logo from "@/assets/barbat-logo-verde.png.asset.json";
 
 const links = [
   { href: "#sobre", label: "Sobre" },
-  { href: "#servicos", label: "Serviços" },
   { href: "#app", label: "App" },
   { href: "#localizacao", label: "Localização" },
 ];
