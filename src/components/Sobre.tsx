@@ -1,5 +1,4 @@
 import { Award, Scissors, Sparkles, Car } from "lucide-react";
-import fachada from "@/assets/fachada.webp.asset.json";
 import { Ornament } from "./Ornament";
 import { useReveal } from "@/hooks/use-reveal";
 
@@ -25,34 +24,23 @@ export function Sobre() {
           <Ornament className="mx-auto w-40 mt-6" />
         </div>
 
-        <div className="mt-16 grid gap-12 lg:grid-cols-2 lg:items-center">
-          <div className="grid sm:grid-cols-2 gap-6">
-            {items.map((it) => (
-              <div
-                key={it.title}
-                className="group bg-white/60 border border-[color:var(--brand-gold)]/30 p-6 rounded-sm hover:bg-white transition-colors"
-              >
-                <div className="grid h-12 w-12 place-items-center rounded-full bg-[color:var(--brand-green)]/10 text-[color:var(--brand-gold)] mb-4 group-hover:bg-[color:var(--brand-green)] transition-colors">
-                  <it.icon className="h-6 w-6" />
-                </div>
-                <h3 className="font-display text-xl text-[color:var(--brand-brown)] mb-2">
-                  {it.title}
-                </h3>
-                <p className="text-sm text-[color:var(--brand-brown)]/75 leading-relaxed">
-                  {it.text}
-                </p>
+        <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {items.map((it) => (
+            <div
+              key={it.title}
+              className="group bg-white/60 border border-[color:var(--brand-gold)]/30 p-6 rounded-sm hover:bg-white transition-colors"
+            >
+              <div className="grid h-12 w-12 place-items-center rounded-full bg-[color:var(--brand-green)]/10 text-[color:var(--brand-gold)] mb-4 group-hover:bg-[color:var(--brand-green)] transition-colors">
+                <it.icon className="h-6 w-6" />
               </div>
-            ))}
-          </div>
-
-          <div className="relative">
-            <div className="absolute -inset-3 border border-[color:var(--brand-gold)]/50 rounded-sm" />
-            <img
-              src={fachada.url}
-              alt="Fachada da Barbearia Barbat"
-              className="relative w-full h-[520px] object-cover rounded-sm shadow-2xl"
-            />
-          </div>
+              <h3 className="font-display text-xl text-[color:var(--brand-brown)] mb-2">
+                {it.title}
+              </h3>
+              <p className="text-sm text-[color:var(--brand-brown)]/75 leading-relaxed">
+                {it.text}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
