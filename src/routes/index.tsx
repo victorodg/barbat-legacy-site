@@ -1,24 +1,50 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Navbar } from "@/components/Navbar";
+import { Hero } from "@/components/Hero";
+import { Sobre } from "@/components/Sobre";
+import { Servicos } from "@/components/Servicos";
+import { AppSection } from "@/components/AppSection";
+import { Galeria } from "@/components/Galeria";
+import { Localizacao } from "@/components/Localizacao";
+import { Footer } from "@/components/Footer";
+import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Barbearia Barbat — Tradição desde 1971 · Tucuruvi, SP" },
+      {
+        name: "description",
+        content:
+          "Barbearia Barbat: tradição de pai para filho desde 1971. Cortes, barba e cuidado premium no Tucuruvi, São Paulo. Agende pelo WhatsApp ou pelo app.",
+      },
+      { property: "og:title", content: "Barbearia Barbat — Tradição desde 1971" },
+      {
+        property: "og:description",
+        content:
+          "A barbearia de pai para filho. Desde 1971 cuidando do visual de homens que se respeitam.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background">
+      <Navbar />
+      <main>
+        <Hero />
+        <Sobre />
+        <Servicos />
+        <AppSection />
+        <Galeria />
+        <Localizacao />
+      </main>
+      <Footer />
+      <WhatsAppFloat />
     </div>
   );
 }
