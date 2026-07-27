@@ -36,9 +36,7 @@ function Index() {
       <main>
         <Hero />
         <Sobre />
-        <Servicos />
         <AppSection />
-        <Galeria />
         <Localizacao />
       </main>
       <Footer />
