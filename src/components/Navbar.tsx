@@ -4,12 +4,9 @@ import logo from "@/assets/barbat-logo-verde.png.asset.json";
 
 const links = [
   { href: "#sobre", label: "Sobre" },
-  { href: "#app", label: "App" },
+  { href: "#contato", label: "Contato" },
   { href: "#localizacao", label: "Localização" },
 ];
-
-const WHATSAPP =
-  "https://wa.me/5511988718260?text=Ol%C3%A1%2C+gostaria+de+agendar+um+hor%C3%A1rio+na+Barbat";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
