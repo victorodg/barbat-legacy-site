@@ -73,13 +73,6 @@ export function Navbar() {
                 {l.label}
               </a>
             ))}
-            <a
-              href="#localizacao"
-              onClick={() => setOpen(false)}
-              className="block py-2 text-[color:var(--brand-cream)] uppercase tracking-widest text-sm"
-            >
-              Contato
-            </a>
           </div>
         )}
       </div>
