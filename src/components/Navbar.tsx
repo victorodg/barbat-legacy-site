@@ -44,12 +44,10 @@ export function Navbar() {
               </a>
             ))}
             <a
-              href={WHATSAPP}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#app"
               className="inline-flex items-center rounded-sm border border-[color:var(--brand-gold)] bg-[color:var(--brand-green-dark)] px-5 py-2.5 text-sm font-medium tracking-wide text-[color:var(--brand-cream)] hover:bg-[color:var(--brand-gold)] hover:text-[color:var(--brand-brown)] transition-colors"
             >
-              Agendar pelo WhatsApp
+              Agendar pelo App
             </a>
           </nav>
 
