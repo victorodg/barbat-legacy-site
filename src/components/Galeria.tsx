@@ -1,20 +1,16 @@
-import brasao from "@/assets/barbat-brasao-verde.png.asset.json";
-import fachada from "@/assets/fachada.webp.asset.json";
-import vitrine from "@/assets/vitrine.webp.asset.json";
-import frase from "@/assets/frase-efeito.webp.asset.json";
 import { Ornament } from "./Ornament";
 import { useReveal } from "@/hooks/use-reveal";
 
 const tiles: Array<{ kind: "image"; src: string; alt: string } | { kind: "brasao" }> = [
-  { kind: "image", src: fachada.url, alt: "Fachada da Barbat" },
+  { kind: "image", src: "/fachada.webp", alt: "Fachada da Barbat" },
   { kind: "brasao" },
-  { kind: "image", src: vitrine.url, alt: "Vitrine da Barbat" },
+  { kind: "image", src: "/vitrine.webp", alt: "Vitrine da Barbat" },
   { kind: "brasao" },
-  { kind: "image", src: frase.url, alt: "Ambiente Barbat" },
+  { kind: "image", src: "/frase-efeito.webp", alt: "Ambiente Barbat" },
   { kind: "brasao" },
-  { kind: "image", src: vitrine.url, alt: "Vitrine" },
+  { kind: "image", src: "/vitrine.webp", alt: "Vitrine" },
   { kind: "brasao" },
-  { kind: "image", src: fachada.url, alt: "Fachada" },
+  { kind: "image", src: "/fachada.webp", alt: "Fachada" },
 ];
 
 export function Galeria() {
@@ -50,7 +46,7 @@ export function Galeria() {
                 key={i}
                 className="aspect-square grid place-items-center rounded-sm bg-[color:var(--brand-green)] shadow-lg shadow-black/30"
               >
-                <img src={brasao.url} alt="" className="w-2/3 opacity-90" />
+                <img src={"/barbat-brasao-verde.png"} alt="" className="w-2/3 opacity-90" />
               </div>
             ),
           )}

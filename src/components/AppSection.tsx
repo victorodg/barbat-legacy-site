@@ -1,6 +1,5 @@
 import { Ornament } from "./Ornament";
 import { StoreButtons } from "./Servicos";
-import brasao from "@/assets/barbat-brasao-verde.png.asset.json";
 import { useReveal } from "@/hooks/use-reveal";
 
 export function AppSection() {
@@ -11,7 +10,7 @@ export function AppSection() {
       className="relative py-24 md:py-32 bg-[color:var(--brand-green)] text-[color:var(--brand-cream)] overflow-hidden"
     >
       <img
-        src={brasao.url}
+        src={"/barbat-brasao-verde.png"}
         alt=""
         aria-hidden="true"
         className="absolute -right-20 top-1/2 -translate-y-1/2 w-[520px] opacity-20 pointer-events-none"

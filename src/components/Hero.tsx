@@ -1,4 +1,3 @@
-import hero from "@/assets/frase-efeito.webp.asset.json";
 import { Ornament } from "./Ornament";
 
 const WHATSAPP =
@@ -8,7 +7,7 @@ export function Hero() {
   return (
     <section id="top" className="relative min-h-screen flex items-center overflow-hidden">
       <img
-        src={hero.url}
+        src={"/frase-efeito.webp"}
         alt="Barbeiro aparando barba na Barbat"
         className="absolute inset-0 h-full w-full object-cover"
       />
