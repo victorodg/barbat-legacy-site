@@ -30,18 +30,18 @@ export function Hero() {
 
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
           <a
+            href="#app"
+            className="inline-flex items-center justify-center rounded-sm bg-[color:var(--brand-green)] border border-[color:var(--brand-gold)] px-8 py-4 text-sm uppercase tracking-widest font-medium text-[color:var(--brand-cream)] hover:bg-[color:var(--brand-gold)] hover:text-[color:var(--brand-brown)] transition-colors"
+          >
+            Agendar pelo App
+          </a>
+          <a
             href={WHATSAPP}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-sm bg-[color:var(--brand-green)] border border-[color:var(--brand-gold)] px-8 py-4 text-sm uppercase tracking-widest font-medium text-[color:var(--brand-cream)] hover:bg-[color:var(--brand-gold)] hover:text-[color:var(--brand-brown)] transition-colors"
-          >
-            Agendar pelo WhatsApp
-          </a>
-          <a
-            href="#app"
             className="inline-flex items-center justify-center rounded-sm border border-[color:var(--brand-cream)]/60 px-8 py-4 text-sm uppercase tracking-widest font-medium text-[color:var(--brand-cream)] hover:bg-[color:var(--brand-cream)] hover:text-[color:var(--brand-brown)] transition-colors"
           >
-            Conheça nosso app
+            Agendar pelo WhatsApp
           </a>
         </div>
       </div>

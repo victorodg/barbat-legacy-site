@@ -30,7 +30,7 @@ export function Localizacao() {
             />
           </div>
 
-          <div className="bg-white p-8 md:p-10 border border-[color:var(--brand-gold)]/30 rounded-sm space-y-6">
+          <div id="contato" className="bg-white p-8 md:p-10 border border-[color:var(--brand-gold)]/30 rounded-sm space-y-6">
             <InfoRow
               icon={MapPin}
               title="Endereço"

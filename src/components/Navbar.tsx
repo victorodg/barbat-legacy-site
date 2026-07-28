@@ -4,12 +4,9 @@ import logo from "@/assets/barbat-logo-verde.png.asset.json";
 
 const links = [
   { href: "#sobre", label: "Sobre" },
-  { href: "#app", label: "App" },
+  { href: "#contato", label: "Contato" },
   { href: "#localizacao", label: "Localização" },
 ];
-
-const WHATSAPP =
-  "https://wa.me/5511988718260?text=Ol%C3%A1%2C+gostaria+de+agendar+um+hor%C3%A1rio+na+Barbat";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -47,12 +44,10 @@ export function Navbar() {
               </a>
             ))}
             <a
-              href={WHATSAPP}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#app"
               className="inline-flex items-center rounded-sm border border-[color:var(--brand-gold)] bg-[color:var(--brand-green-dark)] px-5 py-2.5 text-sm font-medium tracking-wide text-[color:var(--brand-cream)] hover:bg-[color:var(--brand-gold)] hover:text-[color:var(--brand-brown)] transition-colors"
             >
-              Agendar pelo WhatsApp
+              Agendar pelo App
             </a>
           </nav>
 
@@ -78,13 +73,6 @@ export function Navbar() {
                 {l.label}
               </a>
             ))}
-            <a
-              href="#localizacao"
-              onClick={() => setOpen(false)}
-              className="block py-2 text-[color:var(--brand-cream)] uppercase tracking-widest text-sm"
-            >
-              Contato
-            </a>
           </div>
         )}
       </div>
