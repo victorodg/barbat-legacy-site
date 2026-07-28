@@ -73,6 +73,13 @@ export function Navbar() {
                 {l.label}
               </a>
             ))}
+            <a
+              href="#app"
+              onClick={() => setOpen(false)}
+              className="block rounded-sm bg-[color:var(--brand-gold)] px-4 py-3 text-center text-sm font-semibold uppercase tracking-wide text-[color:var(--brand-brown)] hover:bg-[color:var(--brand-cream)] transition-colors"
+            >
+              Agendar pelo App
+            </a>
           </div>
         )}
       </div>
