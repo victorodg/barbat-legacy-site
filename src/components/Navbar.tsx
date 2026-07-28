@@ -79,12 +79,11 @@ export function Navbar() {
               </a>
             ))}
             <a
-              href={WHATSAPP}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block text-center rounded-sm border border-[color:var(--brand-gold)] bg-[color:var(--brand-green-dark)] px-5 py-3 text-sm font-medium text-[color:var(--brand-cream)]"
+              href="#localizacao"
+              onClick={() => setOpen(false)}
+              className="block py-2 text-[color:var(--brand-cream)] uppercase tracking-widest text-sm"
             >
-              Agendar pelo WhatsApp
+              Contato
             </a>
           </div>
         )}
