@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/barbat-logo-verde.png.asset.json";
 
 const links = [
   { href: "#sobre", label: "Sobre" },
@@ -30,7 +29,7 @@ export function Navbar() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           <a href="#top" className="flex items-center gap-3 shrink-0">
-            <img src={logo.url} alt="Barbearia Barbat" className="h-12 md:h-14 w-auto" />
+            <img src={"/barbat-logo-verde.png"} alt="Barbearia Barbat" className="h-12 md:h-14 w-auto" />
           </a>
 
           <nav className="hidden lg:flex items-center gap-8">

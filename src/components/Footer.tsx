@@ -1,5 +1,4 @@
 import { Instagram } from "lucide-react";
-import logo from "@/assets/barbat-logo-verde.png.asset.json";
 import { Ornament } from "./Ornament";
 
 const links = [
@@ -13,7 +12,7 @@ export function Footer() {
   return (
     <footer className="bg-[color:var(--brand-green)] text-[color:var(--brand-cream)] py-16">
       <div className="mx-auto max-w-4xl px-6 text-center">
-        <img src={logo.url} alt="Barbearia Barbat" className="mx-auto h-24 w-auto" />
+        <img src={"/barbat-logo-verde.png"} alt="Barbearia Barbat" className="mx-auto h-24 w-auto" />
         <p className="mt-4 font-display italic text-lg text-[color:var(--brand-gold)]">
           A barbearia de pai para filho
         </p>
