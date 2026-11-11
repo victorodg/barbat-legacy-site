@@ -1,6 +1,18 @@
 import { MapPin, Clock, MessageCircle, Instagram } from "lucide-react";
 import { Ornament } from "./Ornament";
 import { useReveal } from "@/hooks/use-reveal";
+import {
+  ENDERECO,
+  HORARIOS,
+  INSTAGRAM_LINK,
+  INSTAGRAM_USUARIO,
+  WHATSAPP_EXIBICAO,
+  WHATSAPP_LINK,
+} from "@/lib/barbat";
+
+const ENDERECO_BUSCA = encodeURIComponent(
+  "Barbearia Barbat, Av. Nova Cantareira, 2768, Tucuruvi, São Paulo - SP",
+);
 
 export function Localizacao() {
   const ref = useReveal<HTMLDivElement>();
@@ -8,7 +20,7 @@ export function Localizacao() {
     <section id="localizacao" className="py-24 md:py-32 bg-[color:var(--brand-cream)]">
       <div className="mx-auto max-w-7xl px-6">
         <div ref={ref} className="fade-up text-center max-w-2xl mx-auto">
-          <p className="uppercase tracking-[0.4em] text-xs text-[color:var(--brand-gold)] mb-4">
+          <p className="uppercase tracking-[0.4em] text-xs text-[color:var(--brand-gold-deep)] mb-4">
             Visite-nos
           </p>
           <h2 className="font-display text-4xl md:text-5xl text-[color:var(--brand-brown)]">
@@ -21,8 +33,8 @@ export function Localizacao() {
           <div className="relative min-h-[420px]">
             <div className="absolute -inset-3 border border-[color:var(--brand-gold)]/50" />
             <iframe
-              title="Localização Barbat"
-              src="https://www.google.com/maps?q=Av.%20Nova%20Cantareira%2C%202768%20-%20Tucuruvi%2C%20S%C3%A3o%20Paulo&output=embed"
+              title="Mapa com a localização da Barbat"
+              src={`https://www.google.com/maps?q=${ENDERECO_BUSCA}&output=embed`}
               className="relative h-full w-full rounded-sm shadow-xl"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -30,16 +42,31 @@ export function Localizacao() {
             />
           </div>
 
-          <div id="contato" className="bg-white p-8 md:p-10 border border-[color:var(--brand-gold)]/30 rounded-sm space-y-6">
+          <div
+            id="contato"
+            className="bg-white p-8 md:p-10 border border-[color:var(--brand-gold)]/30 rounded-sm space-y-6"
+          >
             <InfoRow
               icon={MapPin}
               title="Endereço"
-              lines={["Av. Nova Cantareira, 2768 — Lj 07", "Tucuruvi, São Paulo — SP"]}
+              lines={[
+                ENDERECO.rua,
+                `${ENDERECO.bairro}, ${ENDERECO.cidade} — ${ENDERECO.estado}`,
+                <a
+                  key="rota"
+                  href={`https://www.google.com/maps/dir/?api=1&destination=${ENDERECO_BUSCA}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-1 inline-block font-medium text-[color:var(--brand-green)] underline underline-offset-4 hover:text-[color:var(--brand-gold-deep)] transition-colors"
+                >
+                  Como chegar
+                </a>,
+              ]}
             />
             <InfoRow
               icon={Clock}
               title="Horários"
-              lines={["Seg–Sex: 10h às 20h", "Sábado: 9h às 19h"]}
+              lines={HORARIOS.map((h) => `${h.dias}: ${h.texto}`)}
             />
             <InfoRow
               icon={MessageCircle}
@@ -47,12 +74,12 @@ export function Localizacao() {
               lines={[
                 <a
                   key="w"
-                  href="https://wa.me/5511988718260"
+                  href={WHATSAPP_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[color:var(--brand-green)] hover:text-[color:var(--brand-gold)] transition-colors"
+                  className="text-[color:var(--brand-green)] hover:text-[color:var(--brand-gold-deep)] transition-colors"
                 >
-                  (11) 98871-8260
+                  {WHATSAPP_EXIBICAO}
                 </a>,
               ]}
             />
@@ -62,12 +89,12 @@ export function Localizacao() {
               lines={[
                 <a
                   key="i"
-                  href="https://instagram.com/barbeariabarbat"
+                  href={INSTAGRAM_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[color:var(--brand-green)] hover:text-[color:var(--brand-gold)] transition-colors"
+                  className="text-[color:var(--brand-green)] hover:text-[color:var(--brand-gold-deep)] transition-colors"
                 >
-                  @barbeariabarbat
+                  @{INSTAGRAM_USUARIO}
                 </a>,
               ]}
             />

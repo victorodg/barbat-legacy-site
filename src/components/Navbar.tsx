@@ -28,11 +28,21 @@ export function Navbar() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
-          <a href="#top" className="flex items-center gap-3 shrink-0">
-            <img src={"/barbat-logo-verde.png"} alt="Barbearia Barbat" className="h-12 md:h-14 w-auto" />
+          <a
+            href="#top"
+            className="flex items-center gap-3 shrink-0"
+            aria-label="Barbearia Barbat — início"
+          >
+            <img
+              src="/barbat-logo-verde.png"
+              alt="Barbearia Barbat"
+              width={509}
+              height={316}
+              className="h-12 md:h-14 w-auto"
+            />
           </a>
 
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav aria-label="Menu principal" className="hidden lg:flex items-center gap-8">
             {links.map((l) => (
               <a
                 key={l.href}
@@ -54,14 +64,20 @@ export function Navbar() {
             type="button"
             onClick={() => setOpen((v) => !v)}
             className="lg:hidden text-[color:var(--brand-cream)] p-2"
-            aria-label="Abrir menu"
+            aria-label={open ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={open}
+            aria-controls="menu-mobile"
           >
             {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
         {open && (
-          <div className="lg:hidden pb-6 pt-2 space-y-3 border-t border-white/10">
+          <nav
+            id="menu-mobile"
+            aria-label="Menu principal"
+            className="lg:hidden pb-6 pt-2 space-y-3 border-t border-white/10"
+          >
             {links.map((l) => (
               <a
                 key={l.href}
@@ -79,7 +95,7 @@ export function Navbar() {
             >
               Agendar pelo App
             </a>
-          </div>
+          </nav>
         )}
       </div>
     </header>

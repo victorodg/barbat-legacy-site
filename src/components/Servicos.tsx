@@ -1,8 +1,6 @@
 import { Ornament } from "./Ornament";
 import { useReveal } from "@/hooks/use-reveal";
-
-const APP_STORE = "https://apps.apple.com/br/app/barbat-barbearia/id6468892274";
-const PLAY_STORE = "https://play.google.com/store/apps/details?id=br.com.starapp.barbatbarbearia&hl=pt";
+import { APP_STORE, PLAY_STORE } from "@/lib/barbat";
 
 const servicos = [
   {
@@ -55,7 +53,7 @@ export function Servicos() {
     <section id="servicos" className="py-24 md:py-32 bg-[color:var(--background)]">
       <div className="mx-auto max-w-7xl px-6">
         <div ref={ref} className="fade-up text-center max-w-2xl mx-auto">
-          <p className="uppercase tracking-[0.4em] text-xs text-[color:var(--brand-gold)] mb-4">
+          <p className="uppercase tracking-[0.4em] text-xs text-[color:var(--brand-gold-deep)] mb-4">
             O ofício
           </p>
           <h2 className="font-display text-4xl md:text-5xl text-[color:var(--brand-brown)]">

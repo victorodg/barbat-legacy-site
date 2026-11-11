@@ -31,6 +31,8 @@
   --color-brand-green-dark: var(--brand-green-dark);
   --color-brand-cream: var(--brand-cream);
   --color-brand-gold: var(--brand-gold);
+  --color-brand-gold-deep: var(--brand-gold-deep);
+  --color-brand-gold-light: var(--brand-gold-light);
   --color-brand-brown: var(--brand-brown);
   --color-brand-black: var(--brand-black);
 
@@ -45,6 +47,9 @@
   --brand-green-dark: #2E4230;
   --brand-cream: #F3E3CC;
   --brand-gold: #CAA076;
+  /* Variações do dourado para textos pequenos ficarem legíveis (contraste WCAG AA) */
+  --brand-gold-deep: #7A5C3A; /* sobre fundos claros (creme/branco) */
+  --brand-gold-light: #E6CBA8; /* sobre o verde */
   --brand-brown: #2F261E;
   --brand-black: #1E1E1E;
 
@@ -72,6 +77,11 @@
 @layer base {
   * { border-color: var(--color-border); }
   html { scroll-behavior: smooth; }
+  /* Âncoras do menu não ficam escondidas atrás da barra fixa */
+  [id] { scroll-margin-top: 6rem; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
@@ -96,12 +106,16 @@
   }
 }
 
+/* Conteúdo só começa escondido quando o navegador roda JavaScript e a pessoa
+   não pediu menos animação — assim o texto nunca fica invisível. */
 @utility fade-up {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
-  &.is-visible {
-    opacity: 1;
-    transform: none;
+  @media (scripting: enabled) and (prefers-reduced-motion: no-preference) {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+    &.is-visible {
+      opacity: 1;
+      transform: none;
+    }
   }
 }
