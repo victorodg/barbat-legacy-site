@@ -17,12 +17,12 @@ export function Footer() {
     <footer className="bg-[color:var(--brand-green)] text-[color:var(--brand-cream)] py-16">
       <div className="mx-auto max-w-4xl px-6 text-center">
         <img
-          src="/barbat-logo-verde.png"
+          src="/barbat-logo.png"
           alt="Barbearia Barbat"
-          width={509}
-          height={316}
+          width={368}
+          height={184}
           loading="lazy"
-          className="mx-auto h-24 w-auto"
+          className="mx-auto h-16 w-auto"
         />
         <p className="mt-4 font-display italic text-lg text-[color:var(--brand-gold-light)]">
           De pai para filho, de geração em geração

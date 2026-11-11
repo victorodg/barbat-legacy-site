@@ -34,11 +34,11 @@ export function Navbar() {
             aria-label="Barbearia Barbat — início"
           >
             <img
-              src="/barbat-logo-verde.png"
+              src="/barbat-logo.png"
               alt="Barbearia Barbat"
-              width={509}
-              height={316}
-              className="h-12 md:h-14 w-auto"
+              width={368}
+              height={184}
+              className="h-10 md:h-11 w-auto"
             />
           </a>
 
