@@ -6,9 +6,11 @@ Site institucional da **Barbat Barbearia**, barbearia premium localizada no Tucu
 
 ## 🔗 Deploy
 
+**https://barbat-barbearia.vercel.app**
+
 Publicado na [Vercel](https://vercel.com), com deploy automático a cada push na branch `main`.
 
-> Domínio a confirmar. Quando estiver definido, preencha `SITE_URL` em `src/lib/barbat.ts`.
+> Se um domínio próprio for configurado, atualize `SITE_URL` em `src/lib/barbat.ts` e o endereço em `public/sitemap.xml` e `public/robots.txt`.
 
 ## 📋 Sobre o projeto
 
