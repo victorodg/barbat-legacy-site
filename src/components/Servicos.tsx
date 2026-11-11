@@ -74,9 +74,7 @@ export function Servicos() {
                 {s.title}
               </h3>
               <Ornament className="mx-auto w-28 mb-4" />
-              <p className="text-sm text-[color:var(--brand-brown)]/75 leading-relaxed">
-                {s.text}
-              </p>
+              <p className="text-sm text-[color:var(--brand-brown)]/75 leading-relaxed">{s.text}</p>
             </article>
           ))}
         </div>

@@ -8,7 +8,7 @@ export function Hero() {
         src="/hero.webp"
         alt="Barbeiro aparando a barba de um cliente na Barbat"
         width={1920}
-        height={1357}
+        height={1095}
         fetchPriority="high"
         className="absolute inset-0 h-full w-full object-cover"
       />
@@ -16,17 +16,16 @@ export function Hero() {
 
       <div className="relative z-10 mx-auto max-w-4xl px-6 py-32 text-center text-[color:var(--brand-cream)]">
         <p className="uppercase tracking-[0.25em] sm:tracking-[0.4em] text-xs text-[color:var(--brand-gold)] mb-6">
-          Barbearia · Tucuruvi, São Paulo
+          Tucuruvi · São Paulo
         </p>
         <Ornament className="mx-auto w-48 mb-8" />
-        <h1 className="font-display text-[2.6rem] sm:text-6xl md:text-7xl leading-[1.05] font-medium text-balance">
-          De pai para filho,
-          <span className="block italic text-[color:var(--brand-gold)]">de geração em geração</span>
+        <h1 className="font-display text-6xl sm:text-7xl lg:text-8xl leading-[1.05] font-medium">
+          Barbat
+          <span className="block italic text-[color:var(--brand-gold)]">Barbearia</span>
         </h1>
         <Ornament className="mx-auto w-48 mt-8 mb-8" />
-        <p className="mx-auto max-w-2xl text-lg md:text-xl text-[color:var(--brand-cream)]/85">
-          Corte e barba feitos com calma, técnica e atenção a cada detalhe — o mesmo cuidado desde
-          1971.
+        <p className="mx-auto max-w-2xl font-display italic text-xl md:text-2xl text-[color:var(--brand-cream)]/90">
+          De geração em geração, o mesmo cuidado desde 1971.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
