@@ -5,14 +5,14 @@ export function Hero() {
   return (
     <section id="top" className="relative min-h-screen flex items-center overflow-hidden">
       <img
-        src="/hero.webp"
-        alt="Barbeiro aparando a barba de um cliente na Barbat"
-        width={1920}
-        height={1095}
+        src="/fotos/salao.webp"
+        alt="Salão da Barbat com cadeiras de couro, paredes verdes e piso de madeira"
+        width={960}
+        height={1280}
         fetchPriority="high"
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 h-full w-full object-cover object-[center_45%]"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/85" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/55 to-black/85" />
 
       <div className="relative z-10 mx-auto max-w-4xl px-6 py-32 text-center text-[color:var(--brand-cream)]">
         <p className="uppercase tracking-[0.25em] sm:tracking-[0.4em] text-xs text-[color:var(--brand-gold)] mb-6">
@@ -24,7 +24,7 @@ export function Hero() {
           <span className="block italic text-[color:var(--brand-gold)]">Barbearia</span>
         </h1>
         <Ornament className="mx-auto w-48 mt-8 mb-8" />
-        <p className="mx-auto max-w-2xl font-display italic text-xl md:text-2xl text-[color:var(--brand-cream)]/90">
+        <p className="mx-auto max-w-2xl font-display italic text-xl md:text-2xl text-balance text-[color:var(--brand-cream)]/90">
           De geração em geração, o mesmo cuidado desde 1971.
         </p>
 

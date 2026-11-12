@@ -4,6 +4,7 @@ import { INSTAGRAM_LINK, WHATSAPP_LINK } from "@/lib/barbat";
 
 const links = [
   { href: "#sobre", label: "Sobre" },
+  { href: "#galeria", label: "Galeria" },
   { href: "#app", label: "App" },
   { href: "#contato", label: "Contato" },
   { href: "#localizacao", label: "Localização" },

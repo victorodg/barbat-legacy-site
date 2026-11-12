@@ -15,8 +15,8 @@ const items = [
   },
   {
     icon: Sparkles,
-    title: "Produtos de qualidade",
-    text: "Produtos selecionados para cuidar do cabelo e da barba durante e depois do atendimento.",
+    title: "Revendedor Reuzel",
+    text: "Somos revendedor oficial Reuzel: pomadas e produtos de qualidade para cabelo e barba.",
   },
   {
     icon: Car,
@@ -40,7 +40,41 @@ export function Sobre() {
           <Ornament className="mx-auto w-40 mt-6" />
         </div>
 
-        <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mt-16 grid items-center gap-10 md:grid-cols-2 lg:gap-16">
+          <figure className="relative mx-auto w-full max-w-md">
+            <div
+              aria-hidden="true"
+              className="absolute -inset-3 border border-[color:var(--brand-gold)]/50"
+            />
+            <img
+              src="/fotos/quadros.webp"
+              srcSet="/fotos/quadros-480.webp 480w, /fotos/quadros.webp 960w"
+              sizes="(min-width: 768px) 28rem, 100vw"
+              alt="Quadros na parede da Barbat: fotos antigas de um barbeiro cortando o cabelo de uma criança, um recorte de jornal e uma navalha antiga"
+              width={960}
+              height={1280}
+              loading="lazy"
+              className="relative aspect-[4/5] w-full rounded-sm object-cover shadow-xl"
+            />
+          </figure>
+          <div className="text-center md:text-left">
+            <h3 className="font-display text-3xl md:text-4xl text-[color:var(--brand-brown)]">
+              Uma história que <span className="italic">está na parede</span>
+            </h3>
+            <div className="mt-6 space-y-4 text-lg leading-relaxed text-[color:var(--brand-brown)]/85">
+              <p>
+                Desde 1971, o ofício da Barbat passa de pai para filho. As fotos antigas, o recorte
+                de jornal e a velha navalha emoldurados no salão contam um pouco dessa história.
+              </p>
+              <p>
+                Hoje a casa tem cadeiras clássicas, cerveja com a nossa marca e produtos Reuzel, mas
+                o jeito de atender continua o mesmo: com calma, técnica e atenção a cada detalhe.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-20 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {items.map((it) => (
             <div
               key={it.title}

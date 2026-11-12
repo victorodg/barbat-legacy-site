@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { Sobre } from "@/components/Sobre";
+import { Galeria } from "@/components/Galeria";
 import { AppSection } from "@/components/AppSection";
 import { Localizacao } from "@/components/Localizacao";
 import { Footer } from "@/components/Footer";
@@ -57,7 +58,10 @@ export const Route = createFileRoute("/")({
       { property: "og:image", content: OG_IMAGE },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: "Barbeiro aparando a barba de um cliente na Barbat" },
+      {
+        property: "og:image:alt",
+        content: "Salão da Barbat com cadeiras de couro, paredes verdes e piso de madeira",
+      },
       ...(SITE_URL ? [{ property: "og:url", content: SITE_URL }] : []),
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: OG_IMAGE },
@@ -80,6 +84,7 @@ function Index() {
       <main>
         <Hero />
         <Sobre />
+        <Galeria />
         <AppSection />
         <Localizacao />
       </main>
