@@ -2,7 +2,7 @@
 // Altere aqui uma vez só que tudo se atualiza.
 
 /** Endereço público do site. Troque aqui se um domínio próprio for configurado na Vercel. */
-export const SITE_URL = "https://barbat-barbearia.vercel.app";
+export const SITE_URL = "https://barbeariabarbat.vercel.app";
 
 export const WHATSAPP_NUMERO = "5511988718260";
 export const WHATSAPP_EXIBICAO = "(11) 98871-8260";

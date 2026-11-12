@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://barbat-barbearia.vercel.app/sitemap.xml
+Sitemap: https://barbeariabarbat.vercel.app/sitemap.xml

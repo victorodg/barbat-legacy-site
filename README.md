@@ -6,7 +6,7 @@ Site institucional da **Barbat Barbearia**, barbearia premium localizada no Tucu
 
 ## 🔗 Deploy
 
-**https://barbat-barbearia.vercel.app**
+**https://barbeariabarbat.vercel.app**
 
 Publicado na [Vercel](https://vercel.com), com deploy automático a cada push na branch `main`.
 
