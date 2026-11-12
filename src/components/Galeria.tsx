@@ -117,9 +117,6 @@ export function Galeria() {
                   decoding="async"
                   className="aspect-[3/4] w-full object-cover transition-transform duration-700 motion-safe:group-hover:scale-105"
                 />
-                <span className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 to-transparent px-3 pb-3 pt-10 text-left text-sm">
-                  {f.legenda}
-                </span>
               </button>
             </li>
           ))}
