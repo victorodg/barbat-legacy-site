@@ -33,9 +33,9 @@ const fotos: Foto[] = [
     legenda: "Detalhes com a nossa marca",
   },
   {
-    nome: "cerveja",
-    alt: "Garrafa da cerveja Barbat American Lager sobre um balcão de madeira",
-    legenda: "Barbat American Lager",
+    nome: "quadros",
+    alt: "Molduras na parede da Barbat com fotos antigas de um barbeiro cortando o cabelo de uma criança, um recorte de jornal e uma navalha antiga",
+    legenda: "Nossa história na parede",
   },
   {
     nome: "bone",
